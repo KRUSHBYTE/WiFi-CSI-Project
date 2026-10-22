@@ -1,0 +1,13 @@
+capture_id,split,valid_packets,reason,status
+realdata/input_data/30ms/csidata/sit/sit117.pcap,development,115,Fewer than 150 valid observations,Excluded pending official policy
+realdata/input_data/30ms/csidata/sit/sit118.pcap,development,128,Fewer than 150 valid observations,Excluded pending official policy
+realdata/input_data/30ms/csidata/sit/sit126.pcap,development,115,Fewer than 150 valid observations,Excluded pending official policy
+realdata/input_data/30ms/csidata/sit/sit134.pcap,development,131,Fewer than 150 valid observations,Excluded pending official policy
+realdata/input_data/30ms/csidata/sit/sit138.pcap,development,122,Fewer than 150 valid observations,Excluded pending official policy
+realdata/input_data/30ms/csidata/sit/sit176.pcap,development,145,Fewer than 150 valid observations,Excluded pending official policy
+realdata/input_data/30ms/csidata/sit/sit5.pcap,development,112,Fewer than 150 valid observations,Excluded pending official policy
+realdata/input_data/30ms/csidata/sitdown/sitdown136.pcap,development,115,Fewer than 150 valid observations,Excluded pending official policy
+realdata/input_data/30ms/csidata/sitdown/sitdown155.pcap,development,148,Fewer than 150 valid observations,Excluded pending official policy
+realdata/input_data/30ms/csidata/validation/sit/sit155.pcap,validation,128,Fewer than 150 valid observations,Excluded pending official policy
+realdata/input_data/30ms/csidata/validation/sit/sit201.pcap,validation,112,Fewer than 150 valid observations,Excluded pending official policy
+realdata/input_data/30ms/csidata/validation/walk/walk37.pcap,validation,121,Fewer than 150 valid observations,Excluded pending official policy
