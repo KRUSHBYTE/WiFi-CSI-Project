@@ -1,0 +1,16 @@
+# Raw and processed datasets
+data/
+
+# Python virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# macOS files
+.DS_Store
+
+# Trained models and large outputs
+models/
+results/
