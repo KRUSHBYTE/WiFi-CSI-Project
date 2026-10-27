@@ -1,4 +1,5 @@
-# Raw and processed datasets
+
+# Raw and processed CSI datasets
 data/
 
 # Python virtual environment
@@ -8,9 +9,22 @@ data/
 __pycache__/
 *.pyc
 
-# macOS files
+# Operating system files
 .DS_Store
+Thumbs.db
 
-# Trained models and large outputs
+# Large model directories
 models/
-results/
+
+# Ignore other results by default
+results/*
+
+# Include Task 2 results and visualizations
+!results/task2/
+
+# Exclude large intermediate arrays
+results/task2/*.npy
+results/task2/*.npz
+
+# Keep checkpoints if their sizes are acceptable
+# checkpoints/
