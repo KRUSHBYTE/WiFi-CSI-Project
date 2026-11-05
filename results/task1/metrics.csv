@@ -1,0 +1,4 @@
+experiment,target_room,K,metric,value,variant,n_validation
+task1_room_id,A+B,,accuracy,1.0,pooled_standardized,272
+task1_room_id,A,,accuracy,1.0,pooled_standardized,147
+task1_room_id,B,,accuracy,1.0,pooled_standardized,125

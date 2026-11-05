@@ -1,5 +1,19 @@
 # WiFi CSI Preprocessing — Cross-Room Human Activity Recognition
 
+> **Update (integration).** The per-room scripts below have been consolidated into one
+> config-driven command, `python src/preprocessing/build_dataset.py`. It uses the same
+> decoding, splits, centre windows and normalization, but replaces Scapy with
+> `pcap_reader.py` and adds QC counts and a provenance manifest (`data/windows/manifest.csv`).
+> Results on the full dataset:
+>
+> * Identical counts: 925/147 Room A windows, 1,076/125 Room B windows, 12 short captures.
+> * The 2 rejected packets are the 2 truncated pcap records.
+> * The regenerated Room A and Room B normalization statistics are identical to the committed
+>   ones, so the "recalculate Room A normalization" item below is resolved.
+> * Short captures stay excluded from benchmark windows.
+>
+> The scripts below are kept for history and still need Scapy.
+
 ## 1. Overview
 
 This repository contains the Python preprocessing work for a cross-room, few-shot human activity recognition project using WiFi Channel State Information (CSI). It prepares Experiment-2 (Room A) and Experiment-3 (Room B) recordings for the machine learning pipeline developed by other team members.

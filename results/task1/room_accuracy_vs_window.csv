@@ -1,0 +1,17 @@
+variant,window_length,accuracy,acc_room_A,acc_room_B
+pooled_standardized,1,1.0,1.0,1.0
+pooled_standardized,2,1.0,1.0,1.0
+pooled_standardized,5,1.0,1.0,1.0
+pooled_standardized,10,1.0,1.0,1.0
+pooled_standardized,25,1.0,1.0,1.0
+pooled_standardized,50,1.0,1.0,1.0
+pooled_standardized,100,1.0,1.0,1.0
+pooled_standardized,150,1.0,1.0,1.0
+gain_invariant,1,0.875,0.9727891156462585,0.76
+gain_invariant,2,0.9926470588235294,0.9931972789115646,0.992
+gain_invariant,5,0.9963235294117647,1.0,0.992
+gain_invariant,10,0.9963235294117647,0.9931972789115646,1.0
+gain_invariant,25,0.9963235294117647,0.9931972789115646,1.0
+gain_invariant,50,0.9963235294117647,0.9931972789115646,1.0
+gain_invariant,100,0.9963235294117647,0.9931972789115646,1.0
+gain_invariant,150,0.9963235294117647,0.9931972789115646,1.0

@@ -1,0 +1,71 @@
+# ---------------------------------------------------------------------------
+# CS60055 Hackathon Challenge 2 - single source of truth for the pipeline.
+# Every derived window records the hash of the "preprocessing" block below
+# in its manifest row (provenance, Hint 9).
+# All paths are relative to the project root unless absolute.
+# ---------------------------------------------------------------------------
+
+paths:
+  raw_experiment2: data/raw/Experiment-2        # read-only source
+  raw_experiment3: data/raw/Experiment-3/Data   # read-only source
+  intermediate_csv: data/intermediate_csv       # common 256-column CSVs
+  windows: data/windows                         # raw-amplitude 150x256 windows + manifest
+  normalization_dir: configs/normalization      # fitted (development-only) stats
+  split_a: configs/room_a_split.csv             # supplied Experiment-2 split
+  split_b: configs/room_b_split.csv             # seed-42 Experiment-3 split (created once)
+  # Task 2 (Krishna) reads room-normalized windows from these two roots:
+  task2_room_a_root: data/strict_normalized
+  task2_room_b_root: data/normalized
+  encoder_checkpoint: checkpoints/task2/csi_encoder.pt
+  results: results
+  models: models
+
+# Sanity check of the downloaded archive (section 4 of the challenge PDF).
+expected_counts:
+  enforce: true
+  room_a_total: 1084
+  room_a_validation: 150
+  room_b_total: 1201
+  room_b_validation_per_class: 25
+
+preprocessing:
+  window_size: 150
+  window_policy: center          # start = (N - 150) // 2 over valid observations
+  short_capture_policy: exclude  # benchmark: exclude captures with < 150 valid obs
+  write_intermediate_csv: true
+  qc:
+    drop_nonfinite_rows: true
+    drop_zero_rows: true          # all-zero CSI carries no information
+    drop_consecutive_duplicates: true
+    drop_negative_rows: false     # counted in the QC report; enable if amplitudes must be >= 0
+    min_valid_fraction: 0.5       # reject capture if < 50% of observations survive
+  pcap:
+    payload_length: 1042          # 18-byte Nexmon header + 256 x 4-byte words
+    magic: "1111"
+
+task1:
+  feature_set: handcrafted        # per-subcarrier mean / std / mean-abs-diff
+  gain_invariant: false           # true: divide each window by its mean amplitude
+  window_lengths: [1, 2, 5, 10, 25, 50, 100, 150]
+  C: 1.0
+
+task3:
+  k_values: [1, 5, 10, 20]
+  seeds: [0, 1, 2, 3, 4]          # independent support draws per K
+  feature_extractors: [ssl, random, handcrafted, dynamics]
+  # Chosen on the validation comparison (README section 8). Mean macro-F1 over both
+  # directions and all K: dynamics 0.353, random-weight encoder 0.357 (random is ahead by
+  # 0.002-0.008 on every seed - a negligible margin), handcrafted 0.329, SSL 0.292.
+  # dynamics is preferred because it is parameter-free, interpretable and excludes the
+  # static-multipath room fingerprint by construction.
+  default_extractor: dynamics
+  classifiers: [logreg, prototype]
+  default_classifier: logreg
+  feature_alignment: true         # per-domain standardization of features (unlabeled dev)
+  routing_modes: [predicted, oracle, none]
+  confusion_k: 5
+  deploy_k: 20                    # K used for the models saved for run_episode.py
+  shared_activities: [SIT, STAND, WALK]
+  target_exclusive:
+    A: [SIT-DOWN, STAND-UP, FALL]
+    B: [EMPTY, LYING]

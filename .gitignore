@@ -1,5 +1,5 @@
 
-# Raw and processed CSI datasets
+# Raw and processed CSI datasets (never commit data)
 data/
 
 # Python virtual environment
@@ -12,19 +12,14 @@ __pycache__/
 # Operating system files
 .DS_Store
 Thumbs.db
+__MACOSX/
 
-# Large model directories
-models/
+# Results: keep the small metrics/figures/predictions, never large arrays
+results/**/*.npy
+results/**/*.npz
 
-# Ignore other results by default
-results/*
-
-# Include Task 2 results and visualizations
-!results/task2/
-
-# Exclude large intermediate arrays
-results/task2/*.npy
-results/task2/*.npz
+# Trained models are small (< 10 MB) and needed by run_episode.py, so they are kept.
+# models/
 
 # Keep checkpoints if their sizes are acceptable
 # checkpoints/

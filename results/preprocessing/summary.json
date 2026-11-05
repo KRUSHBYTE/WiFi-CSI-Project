@@ -1,0 +1,25 @@
+{
+  "preprocessing_hash": "63eefa212fb5",
+  "captures": 2285,
+  "room_A_development": {
+    "ok": 925,
+    "short": 9
+  },
+  "room_A_validation": {
+    "ok": 147,
+    "short": 3
+  },
+  "room_B_development": {
+    "ok": 1076
+  },
+  "room_B_validation": {
+    "ok": 125
+  },
+  "truncated_records": 2,
+  "non_udp_records": 0,
+  "rejected_payloads": 0,
+  "qc_zero_rows": 0,
+  "qc_duplicate_rows": 0,
+  "qc_nonfinite_rows": 0,
+  "qc_negative_rows": 0
+}

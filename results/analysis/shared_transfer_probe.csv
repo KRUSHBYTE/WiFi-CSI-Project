@@ -1,0 +1,17 @@
+extractor,train_room,test_room,setting,macro_f1,n_test
+ssl,A,A,within_room,0.958851095993953,72
+ssl,A,B,cross_room,0.042831368918325445,75
+ssl,B,B,within_room,0.9066293183940243,75
+ssl,B,A,cross_room,0.25,72
+random,A,A,within_room,0.9026811594202898,72
+random,A,B,cross_room,0.41113053613053613,75
+random,B,B,within_room,0.9199999999999999,75
+random,B,A,cross_room,0.22225976187347884,72
+handcrafted,A,A,within_room,0.971879100082833,72
+handcrafted,A,B,cross_room,0.19301267837853206,75
+handcrafted,B,B,within_room,0.9866613311991462,75
+handcrafted,B,A,cross_room,0.0947045484860611,72
+dynamics,A,A,within_room,0.971879100082833,72
+dynamics,A,B,cross_room,0.34497354497354493,75
+dynamics,B,B,within_room,0.9866613311991462,75
+dynamics,B,A,cross_room,0.027195027195027196,72

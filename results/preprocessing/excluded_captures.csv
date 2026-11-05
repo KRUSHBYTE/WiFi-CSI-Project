@@ -1,0 +1,13 @@
+window_id,capture_id,room,activity,split,status,window_start,window_path,csi_packets,qc_valid_rows,preprocessing_hash,records,truncated_records,non_udp_records,rejected_payloads,qc_input_rows,qc_nonfinite_rows,qc_zero_rows,qc_duplicate_rows,qc_negative_rows,qc_rejected_capture,task2_path
+A:realdata/input_data/30ms/csidata/sit/sit117.pcap,realdata/input_data/30ms/csidata/sit/sit117.pcap,A,SIT,development,short,,,115,115,63eefa212fb5,115,0.0,0.0,0.0,115,0,0,0,0,False,nan
+A:realdata/input_data/30ms/csidata/sit/sit118.pcap,realdata/input_data/30ms/csidata/sit/sit118.pcap,A,SIT,development,short,,,128,128,63eefa212fb5,128,0.0,0.0,0.0,128,0,0,0,0,False,nan
+A:realdata/input_data/30ms/csidata/sit/sit126.pcap,realdata/input_data/30ms/csidata/sit/sit126.pcap,A,SIT,development,short,,,115,115,63eefa212fb5,115,0.0,0.0,0.0,115,0,0,0,0,False,nan
+A:realdata/input_data/30ms/csidata/sit/sit134.pcap,realdata/input_data/30ms/csidata/sit/sit134.pcap,A,SIT,development,short,,,131,131,63eefa212fb5,131,0.0,0.0,0.0,131,0,0,0,0,False,nan
+A:realdata/input_data/30ms/csidata/sit/sit138.pcap,realdata/input_data/30ms/csidata/sit/sit138.pcap,A,SIT,development,short,,,122,122,63eefa212fb5,122,0.0,0.0,0.0,122,0,0,0,0,False,nan
+A:realdata/input_data/30ms/csidata/sit/sit176.pcap,realdata/input_data/30ms/csidata/sit/sit176.pcap,A,SIT,development,short,,,145,145,63eefa212fb5,145,0.0,0.0,0.0,145,0,0,0,0,False,nan
+A:realdata/input_data/30ms/csidata/sit/sit5.pcap,realdata/input_data/30ms/csidata/sit/sit5.pcap,A,SIT,development,short,,,112,112,63eefa212fb5,112,0.0,0.0,0.0,112,0,0,0,0,False,nan
+A:realdata/input_data/30ms/csidata/sitdown/sitdown136.pcap,realdata/input_data/30ms/csidata/sitdown/sitdown136.pcap,A,SIT-DOWN,development,short,,,115,115,63eefa212fb5,115,0.0,0.0,0.0,115,0,0,0,0,False,nan
+A:realdata/input_data/30ms/csidata/sitdown/sitdown155.pcap,realdata/input_data/30ms/csidata/sitdown/sitdown155.pcap,A,SIT-DOWN,development,short,,,148,148,63eefa212fb5,148,0.0,0.0,0.0,148,0,0,0,0,False,nan
+A:realdata/input_data/30ms/csidata/validation/sit/sit155.pcap,realdata/input_data/30ms/csidata/validation/sit/sit155.pcap,A,SIT,validation,short,,,128,128,63eefa212fb5,128,0.0,0.0,0.0,128,0,0,0,0,False,nan
+A:realdata/input_data/30ms/csidata/validation/sit/sit201.pcap,realdata/input_data/30ms/csidata/validation/sit/sit201.pcap,A,SIT,validation,short,,,112,112,63eefa212fb5,112,0.0,0.0,0.0,112,0,0,0,0,False,nan
+A:realdata/input_data/30ms/csidata/validation/walk/walk37.pcap,realdata/input_data/30ms/csidata/validation/walk/walk37.pcap,A,WALK,validation,short,,,121,121,63eefa212fb5,121,0.0,0.0,0.0,121,0,0,0,0,False,nan
